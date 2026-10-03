@@ -13,3 +13,4 @@ Task 1: complete (npm test -> 4 passed; typecheck exit 0) | commit: "chore: scaf
 Ruling: a foreign session (its ledger line said "pnpm synth", AppSync, Cognito: not this project) ran git add -A + commit inside this repo at 04:15:31 and swept Task 2 files into commit 81ba3fd "feat(infra): gate synth with cdk-nag..." and added a bogus "Task 15" ledger line (removed) - cannot rewrite history (no amend) - Task 2 files live in 81ba3fd under the wrong subject; builder now commits with explicit paths
 Task 2: complete (npm test -> 25 passed; typecheck exit 0) | commit: 81ba3fd (mis-attributed, see Ruling)
 Task 3: complete (npm test -> 92 passed (11 files, tasks 3-6 combined run); typecheck exit 0) | commit: "feat(core): price proposals from the catalog and enforce caps and budget"
+Task 4: complete (npm test 92 passed; typecheck 0) | commit: "feat(core): add run status machine and approver authorization"
