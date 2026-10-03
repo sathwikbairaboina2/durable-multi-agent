@@ -21,3 +21,4 @@ Task 7: complete (npm test -> 109 passed (15 files); typecheck exit 0) | commit:
 Task 8: complete (npm test -> 135 passed (20 files); typecheck exit 0) | commit: "feat(handlers): start runs, invoke the agent team, persist and price proposals"
 Task 9: complete (npm test -> 161 passed (24 files); typecheck exit 0) | commit: "feat(handlers): request Slack approval and resume the workflow on verified clicks"
 Task 10: complete (npm test -> 179 passed (27 files); typecheck exit 0) | commit: "feat(handlers): execute purchase orders idempotently and finalize run outcomes"
+Task 11: complete (npm test -> 190 passed (29 files); harness build exit 0; typecheck exit 0) | commit: "feat(harness): resolve CloudFormation intrinsics and load stacks for Step Functions Local"
