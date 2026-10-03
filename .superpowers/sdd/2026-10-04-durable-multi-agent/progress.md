@@ -20,3 +20,4 @@ Ruling: second stray ledger line from a sibling session (infra-agent) removed; c
 Task 7: complete (npm test -> 109 passed (15 files); typecheck exit 0) | commit: "feat(adapters): add DynamoDB repositories with transactional ledger execution"
 Task 8: complete (npm test -> 135 passed (20 files); typecheck exit 0) | commit: "feat(handlers): start runs, invoke the agent team, persist and price proposals"
 Task 9: complete (npm test -> 161 passed (24 files); typecheck exit 0) | commit: "feat(handlers): request Slack approval and resume the workflow on verified clicks"
+Task 10: complete (npm test -> 179 passed (27 files); typecheck exit 0) | commit: "feat(handlers): execute purchase orders idempotently and finalize run outcomes"
