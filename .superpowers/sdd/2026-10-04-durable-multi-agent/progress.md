@@ -29,3 +29,4 @@ Ruling: cdk-nag 3.0.2 replaced Aspects/NagSuppressions with CDK policy validatio
 Ruling: SlackInteractionsFn also gets STATE_MACHINE_ARN and get-run fromEnv no longer requires BUDGETS_TABLE - handler fromEnv needs them - none
 Task 15: complete (npm test -> 216 passed (34 files); typecheck 0; npm run synth exit 0, bundled 9 handlers, no AwsSolutions errors, template has 59 resources) | commit: "feat(infra): expose the HTTP API and enforce least-privilege IAM with cdk-nag"
 Task 16: complete (npm test -> 217 passed (35 files); typecheck 0; local:up + integration env.test.ts -> 3 passed; 2 containers durable-multi-agent-*) | commit: "feat(local): run the synthesized stack on DynamoDB Local and Step Functions Local"
+Task 17: complete (integration flow.test.ts -> 6 passed (approve, reject, policy, invalid output, self-approval, expiry)) | commit: "test(integration): cover approve, reject, policy, invalid output, self-approval and expiry flows"
