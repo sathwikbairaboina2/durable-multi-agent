@@ -24,3 +24,4 @@ Task 10: complete (npm test -> 179 passed (27 files); typecheck exit 0) | commit
 Task 11: complete (npm test -> 190 passed (29 files); harness build exit 0; typecheck exit 0) | commit: "feat(harness): resolve CloudFormation intrinsics and load stacks for Step Functions Local"
 Task 12: complete (npm test -> 196 passed (30 files); typecheck 0; npm pack --dry-run lists dist/**, README.md, LICENSE, package.json only) | commit: "feat(harness): host Lambda handlers in-process for Step Functions Local"
 Task 13: complete (npm test -> 201 passed (31 files); typecheck exit 0) | commit: "feat(infra): add CDK stack with encrypted, point-in-time-recoverable tables"
+Task 14: complete (npm test -> 210 passed (32 files); typecheck exit 0) | commit: "feat(infra): define the procurement state machine with task-token approval and bounded wait"
