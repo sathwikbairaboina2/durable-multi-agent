@@ -27,3 +27,4 @@ Task 13: complete (npm test -> 201 passed (31 files); typecheck exit 0) | commit
 Task 14: complete (npm test -> 210 passed (32 files); typecheck exit 0) | commit: "feat(infra): define the procurement state machine with task-token approval and bounded wait"
 Ruling: cdk-nag 3.0.2 replaced Aspects/NagSuppressions with CDK policy validation (Validations.of(...).addPlugins/acknowledge) - used the v3 API and granular IAM acknowledgement ids, nag test asserts synth throws without them - plan snippets for v2 API were not applicable - none
 Ruling: SlackInteractionsFn also gets STATE_MACHINE_ARN and get-run fromEnv no longer requires BUDGETS_TABLE - handler fromEnv needs them - none
+Task 15: complete (npm test -> 216 passed (34 files); typecheck 0; npm run synth exit 0, bundled 9 handlers, no AwsSolutions errors, template has 59 resources) | commit: "feat(infra): expose the HTTP API and enforce least-privilege IAM with cdk-nag"
