@@ -16,3 +16,4 @@ Task 3: complete (npm test -> 92 passed (11 files, tasks 3-6 combined run); type
 Task 4: complete (npm test 92 passed; typecheck 0) | commit: "feat(core): add run status machine and approver authorization"
 Task 5: complete (npm test 92 passed; typecheck 0) | commit: "feat(core): verify Slack signatures and build approval messages"
 Task 6: complete (npm test 92 passed; typecheck 0) | commit: "feat(core): plan purchase order execution bound to the approved proposal hash"
+Task Task 7: complete (tests: opa test -> PASS: 10/10; pytest -q -> 82 passed). Note: temporary src/infra_agent/policy/stub.rego declares empty needs_approval/warn until Task 10: complete () | commit: ""
