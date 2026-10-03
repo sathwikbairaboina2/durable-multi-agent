@@ -1,0 +1,54 @@
+{
+  "name": "durable-multi-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:harness": "node -e \"0\"",
+    "pretypecheck": "npm run build:harness",
+    "typecheck": "tsc -p tsconfig.json",
+    "pretest": "npm run build:harness",
+    "test": "vitest run",
+    "pretest:integration": "npm run build:harness",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "bundle": "node scripts/bundle.mjs",
+    "synth": "node scripts/bundle.mjs && cdk synth --quiet",
+    "predemo": "npm run build:harness",
+    "demo": "tsx cli/pa.ts demo",
+    "prebench": "npm run build:harness",
+    "bench": "tsx cli/pa.ts bench",
+    "bench:headline": "tsx bench/headline.ts",
+    "local:up": "docker compose up -d dynamodb sfn",
+    "local:down": "docker compose down"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-agentcore": "3.1146.0",
+    "@aws-sdk/client-dynamodb": "3.1146.0",
+    "@aws-sdk/client-secrets-manager": "3.1146.0",
+    "@aws-sdk/client-sfn": "3.1146.0",
+    "@aws-sdk/lib-dynamodb": "3.1146.0",
+    "ajv": "8.20.0",
+    "aws-cdk-lib": "2.272.0",
+    "cdk-nag": "3.0.2",
+    "constructs": "10.8.1",
+    "ulid": "3.0.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.164",
+    "@types/node": "24.19.1",
+    "aws-cdk": "2.1144.0",
+    "aws-sdk-client-mock": "4.1.0",
+    "esbuild": "0.28.2",
+    "fast-check": "4.10.2",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  }
+}

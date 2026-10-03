@@ -1,0 +1,11 @@
+node_modules/
+dist/
+cdk.out/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+agent/.venv/
+__pycache__/
+.pytest_cache/
