@@ -10,3 +10,4 @@ Ruling: LocalStack not used (no auth token) - SFN Local + DynamoDB Local + in-pr
 Ruling: one CDK stack with Data/Flow/Api constructs instead of three stacks - harness loads one template without Fn::ImportValue (ADR 0002) - no independent stack deploys
 Ruling: durable-functions variant, AgentStack, revise loop deferred to v0.2 - no AWS billing data or ServerlessAgent commits available (ADR 0007) - headline is the chaos benchmark, not SFN-vs-durable cost
 Task 1: complete (npm test -> 4 passed; typecheck exit 0) | commit: "chore: scaffold TypeScript project with pinned dependencies"
+Task 15: complete (pnpm synth exit 0; 10 acknowledgements; infra vitest 10 passed (4 files); resources {DynamoDB::GlobalTable:1,SQS::Queue:2,Cognito::UserPool:1,IAM::Role:5,AppSync::GraphQLApi:1,AppSync::Resolver:5,Lambda::Function:3,Lambda::EventSourceMapping:2,...}) | commit: "feat(infra): gate synth with cdk-nag AwsSolutions and documented acknowledgements"
