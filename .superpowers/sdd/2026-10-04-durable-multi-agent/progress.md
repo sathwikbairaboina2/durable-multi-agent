@@ -22,3 +22,4 @@ Task 8: complete (npm test -> 135 passed (20 files); typecheck exit 0) | commit:
 Task 9: complete (npm test -> 161 passed (24 files); typecheck exit 0) | commit: "feat(handlers): request Slack approval and resume the workflow on verified clicks"
 Task 10: complete (npm test -> 179 passed (27 files); typecheck exit 0) | commit: "feat(handlers): execute purchase orders idempotently and finalize run outcomes"
 Task 11: complete (npm test -> 190 passed (29 files); harness build exit 0; typecheck exit 0) | commit: "feat(harness): resolve CloudFormation intrinsics and load stacks for Step Functions Local"
+Task 12: complete (npm test -> 196 passed (30 files); typecheck 0; npm pack --dry-run lists dist/**, README.md, LICENSE, package.json only) | commit: "feat(harness): host Lambda handlers in-process for Step Functions Local"
