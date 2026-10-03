@@ -1,0 +1,12 @@
+{
+  "name": "sfn-local-harness",
+  "version": "0.1.0",
+  "description": "Run the Step Functions state machine your CDK app synthesizes on AWS Step Functions Local, with your Lambda handlers in-process.",
+  "type": "module",
+  "license": "MIT",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=22" },
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "peerDependencies": { "@aws-sdk/client-dynamodb": "^3.1146.0", "@aws-sdk/client-sfn": "^3.1146.0" }
+}

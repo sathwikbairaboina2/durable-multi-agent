@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build:harness": "node -e \"0\"",
+    "build:harness": "npm run build -w sfn-local-harness",
     "pretypecheck": "npm run build:harness",
     "typecheck": "tsc -p tsconfig.json",
     "pretest": "npm run build:harness",
@@ -38,6 +38,7 @@
     "aws-cdk-lib": "2.272.0",
     "cdk-nag": "3.0.2",
     "constructs": "10.8.1",
+    "sfn-local-harness": "0.1.0",
     "ulid": "3.0.2"
   },
   "devDependencies": {

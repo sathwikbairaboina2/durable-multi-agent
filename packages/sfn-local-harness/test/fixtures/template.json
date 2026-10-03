@@ -1,0 +1,47 @@
+{
+  "Resources": {
+    "Table1": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [{ "AttributeName": "pk", "KeyType": "HASH" }, { "AttributeName": "sk", "KeyType": "RANGE" }],
+        "AttributeDefinitions": [{ "AttributeName": "pk", "AttributeType": "S" }, { "AttributeName": "sk", "AttributeType": "S" }],
+        "BillingMode": "PAY_PER_REQUEST",
+        "TimeToLiveSpecification": { "AttributeName": "ttl", "Enabled": true },
+        "SSESpecification": { "SSEEnabled": true },
+        "PointInTimeRecoverySpecification": { "PointInTimeRecoveryEnabled": true }
+      }
+    },
+    "Fn1": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Environment": {
+          "Variables": {
+            "TABLE": { "Ref": "Table1" },
+            "TABLE_ARN": { "Fn::GetAtt": ["Table1", "Arn"] },
+            "LABEL": { "Fn::Sub": "${AWS::Region}-${Table1}" },
+            "PLAIN": "x"
+          }
+        }
+      }
+    },
+    "Fn2": { "Type": "AWS::Lambda::Function", "Properties": {} },
+    "Sm1": {
+      "Type": "AWS::StepFunctions::StateMachine",
+      "Properties": {
+        "DefinitionString": {
+          "Fn::Join": ["", [
+            "{\"StartAt\":\"A\",\"States\":{\"A\":{\"Type\":\"Task\",\"Resource\":\"arn:",
+            { "Ref": "AWS::Partition" },
+            ":states:::lambda:invoke\",\"Parameters\":{\"FunctionName\":\"",
+            { "Fn::GetAtt": ["Fn1", "Arn"] },
+            "\"},\"End\":true}}}"
+          ]]
+        }
+      }
+    },
+    "Fn3": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": { "Environment": { "Variables": { "SM": { "Ref": "Sm1" } } } }
+    }
+  }
+}
