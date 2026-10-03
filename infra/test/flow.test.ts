@@ -59,7 +59,10 @@ describe('ProcurementFlow definition', () => {
 
   it('tags every function with its handler name', () => {
     const names = Object.values(template.findResources('AWS::Lambda::Function')).map((r: any) => r.Properties.Environment.Variables.DMA_HANDLER);
-    expect(new Set(names)).toEqual(new Set(['invoke-agent', 'persist-proposal', 'policy-check', 'request-approval', 'execute-po', 'finalize']));
+    expect(new Set(names)).toEqual(new Set([
+      'invoke-agent', 'persist-proposal', 'policy-check', 'request-approval', 'execute-po', 'finalize',
+      'start-run', 'get-run', 'slack-interactions',
+    ]));
   });
 
   it('traces and logs the state machine without execution data (I11)', () => {

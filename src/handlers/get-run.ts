@@ -35,7 +35,7 @@ export async function fromEnv(env: Env): Promise<(event: any) => Promise<any>> {
   const doc = makeDocClient(env);
   return makeGetRunHandler({
     runs: new RunsRepo(doc, requireEnv(env, 'RUNS_TABLE')),
-    ledger: new LedgerRepo(doc, { runs: requireEnv(env, 'RUNS_TABLE'), budgets: requireEnv(env, 'BUDGETS_TABLE'), ledger: requireEnv(env, 'LEDGER_TABLE') }),
+    ledger: new LedgerRepo(doc, { runs: requireEnv(env, 'RUNS_TABLE'), budgets: env.BUDGETS_TABLE || 'unused', ledger: requireEnv(env, 'LEDGER_TABLE') }),
   });
 }
 

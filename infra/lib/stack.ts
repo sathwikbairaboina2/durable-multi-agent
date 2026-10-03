@@ -2,6 +2,7 @@ import { CfnParameter, Stack, type StackProps } from 'aws-cdk-lib';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
 import type { HandlerName } from '../../src/handlers/registry.js';
+import { Api } from './api.js';
 import { Data } from './data.js';
 import { Flow } from './flow.js';
 
@@ -22,6 +23,7 @@ export interface DurableMultiAgentStackProps extends StackProps {
 export class DurableMultiAgentStack extends Stack {
   readonly data: Data;
   readonly flow: Flow;
+  readonly api: Api;
 
   constructor(scope: Construct, id: string, props: DurableMultiAgentStackProps) {
     super(scope, id, props);
@@ -49,6 +51,14 @@ export class DurableMultiAgentStack extends Stack {
       agentRuntimeArn,
       slackChannelId: props.slackChannelId ?? 'C0APPROVALS',
       maxOrderCents: props.maxOrderCents ?? 1_000_000,
+      codeFor,
+    });
+
+    this.api = new Api(this, 'Api', {
+      data: this.data,
+      stateMachine: this.flow.stateMachine,
+      slackSecret: this.flow.slackSecret,
+      approverIds: props.approverIds ?? '',
       codeFor,
     });
   }
