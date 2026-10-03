@@ -9,3 +9,4 @@ Planning (Opus, 2026-10-04): complete. Prototypes run on this host (not in repo)
 Ruling: LocalStack not used (no auth token) - SFN Local + DynamoDB Local + in-process Lambda host instead (ADR 0001) - no IAM/JSONata/redrive parity locally
 Ruling: one CDK stack with Data/Flow/Api constructs instead of three stacks - harness loads one template without Fn::ImportValue (ADR 0002) - no independent stack deploys
 Ruling: durable-functions variant, AgentStack, revise loop deferred to v0.2 - no AWS billing data or ServerlessAgent commits available (ADR 0007) - headline is the chaos benchmark, not SFN-vs-durable cost
+Task 1: complete (npm test -> 4 passed; typecheck exit 0) | commit: "chore: scaffold TypeScript project with pinned dependencies"
