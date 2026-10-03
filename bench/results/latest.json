@@ -1,0 +1,43 @@
+{
+  "config": {
+    "runs": 200,
+    "crashRate": 0.3,
+    "conflictRate": 0.1,
+    "budgetFits": 0.7,
+    "concurrency": 20,
+    "seed": 42
+  },
+  "counts": {
+    "DONE": 144,
+    "REJECTED_BY_HUMAN": 6,
+    "FAILED": 50
+  },
+  "failureReasons": {
+    "BUDGET_EXHAUSTED": 50
+  },
+  "crashesInjected": 65,
+  "doubleClicks": 179,
+  "conflictingClicks": 21,
+  "ledgerRows": 144,
+  "ledgerStatusMismatches": 0,
+  "budgetDriftCents": 0,
+  "overspendCents": 0,
+  "approvalToLedgerMs": {
+    "p50": 1973,
+    "p95": 2210
+  },
+  "stateTransitionsPerRun": {
+    "median": 8,
+    "min": 6,
+    "max": 8
+  },
+  "estimatedSfnCostPerRunUsd": 0.0002,
+  "wallClockSeconds": 44.2,
+  "environment": {
+    "stepFunctionsLocal": "2.0.0",
+    "dynamodbLocal": "3.3.1",
+    "node": "v24.18.0",
+    "platform": "win32"
+  },
+  "measuredAt": "2026-10-03T23:39:26.691Z"
+}
