@@ -72,7 +72,7 @@ export class RunsRepo implements RunsPort {
     try {
       await this.doc.send(new PutCommand({
         TableName: this.table,
-        Item: { ...proposalKey(runId), proposal: p.proposal, proposalHash: p.proposalHash, usage: p.usage },
+        Item: { ...proposalKey(runId), proposal: p.proposal, proposalHash: p.proposalHash, usage: p.usage, model: p.model },
         ConditionExpression: 'attribute_not_exists(pk) OR proposalHash = :h',
         ExpressionAttributeValues: { ':h': p.proposalHash },
       }));
@@ -85,7 +85,7 @@ export class RunsRepo implements RunsPort {
   async getProposal(runId: string): Promise<StoredProposal | null> {
     const r = await this.doc.send(new GetCommand({ TableName: this.table, Key: proposalKey(runId), ConsistentRead: true }));
     if (!r.Item) return null;
-    return { proposal: r.Item.proposal, proposalHash: r.Item.proposalHash, usage: r.Item.usage } as StoredProposal;
+    return { proposal: r.Item.proposal, proposalHash: r.Item.proposalHash, usage: r.Item.usage, model: r.Item.model } as StoredProposal;
   }
 
   async createApproval(a: StoredApproval, nowIso: string): Promise<void> {

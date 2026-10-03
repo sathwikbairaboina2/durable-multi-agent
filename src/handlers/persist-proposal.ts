@@ -16,7 +16,7 @@ export function makePersistProposalHandler(deps: PersistProposalDeps) {
     if (!v.ok) throw new InvalidProposal(v.errors.join('; '));
     if (v.value.runId !== event.runId) throw new InvalidProposal('runId mismatch');
     const hash = proposalHash(v.value);
-    await deps.runs.putProposal(event.runId, { proposal: v.value, proposalHash: hash, usage: event.agent.usage });
+    await deps.runs.putProposal(event.runId, { proposal: v.value, proposalHash: hash, usage: event.agent.usage, model: event.agent.model });
     const moved = await deps.runs.transition(event.runId, 'PLANNING', 'POLICY', deps.now());
     if (!moved) {
       const meta = await deps.runs.getMeta(event.runId);

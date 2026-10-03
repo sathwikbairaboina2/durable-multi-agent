@@ -1,0 +1,30 @@
+▶ request from <@U0REQUESTER>: "We need 3 more GPU dev boxes for the ML team, under $9k"
+  +    7ms  PLANNING
+  +  261ms  POLICY
+  +  502ms  AWAITING_APPROVAL
+
+┌──────────────────────────────────────────────────────────────┐
+│ Purchase order approval                                      │
+│                                                              │
+│ Requester: @U0REQUESTER                                      │
+│ Run: 01M421FEAJZ4P3CYTKJ6Z43JQZ                              │
+│                                                              │
+│ 3 × GPU dev box (RTX 4090)                         $8,697.00 │
+│                                                              │
+│ Total $8,697.00 · budget left after this order $6,303.00     │
+│                                                              │
+│ Requested: We need 3 more GPU dev boxes for the ML team,     │
+│ under $9k. Order: 3 x GPU dev box (RTX 4090); total by       │
+│ catalog price $8,697.00.                                     │
+│                                                              │
+│ [ Approve ]  [ Reject ]                                      │
+└──────────────────────────────────────────────────────────────┘
+
+✔ <@U0APPROVER1> clicked Approve → "Approved. Placing the order."
+  +  778ms  DONE
+
+Outcome: DONE
+  PO#01M421FEAJZ4P3CYTKJ6Z43JQZ $8,697.00 approved by U0APPROVER1
+  budget left this month: $6,303.00
+  agent model: scripted, 3 model steps, 709 input / 86 output tokens
+  total elapsed: 6.9 s (approval reply: "Approved. Placing the order.")

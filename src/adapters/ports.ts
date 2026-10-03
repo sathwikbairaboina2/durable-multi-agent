@@ -8,7 +8,7 @@ export interface RunMeta {
   createdAt: string; updatedAt: string;
   executionArn?: string; failureReason?: string; slackTs?: string; slackChannel?: string;
 }
-export interface StoredProposal { proposal: ProposedOrder; proposalHash: string; usage: ModelUsage }
+export interface StoredProposal { proposal: ProposedOrder; proposalHash: string; usage: ModelUsage; model?: string }
 export interface StoredApproval extends ApprovalRecord { taskToken: string; ttl: number }
 
 export interface RunsPort {

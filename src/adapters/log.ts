@@ -14,6 +14,7 @@ export function redact(value: unknown): unknown {
 }
 
 export function log(level: Level, msg: string, fields: Record<string, unknown> = {}): void {
+  if (process.env.DMA_QUIET_LOGS === '1' && (level === 'info' || level === 'debug')) return;
   sink(JSON.stringify({ level, msg, ...(redact(fields) as Record<string, unknown>) }));
 }
 
