@@ -14,3 +14,4 @@ Ruling: a foreign session (its ledger line said "pnpm synth", AppSync, Cognito: 
 Task 2: complete (npm test -> 25 passed; typecheck exit 0) | commit: 81ba3fd (mis-attributed, see Ruling)
 Task 3: complete (npm test -> 92 passed (11 files, tasks 3-6 combined run); typecheck exit 0) | commit: "feat(core): price proposals from the catalog and enforce caps and budget"
 Task 4: complete (npm test 92 passed; typecheck 0) | commit: "feat(core): add run status machine and approver authorization"
+Task 5: complete (npm test 92 passed; typecheck 0) | commit: "feat(core): verify Slack signatures and build approval messages"
