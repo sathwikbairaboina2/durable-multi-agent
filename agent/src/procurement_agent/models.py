@@ -102,6 +102,7 @@ def make_model(name: str | None = None) -> BaseChatModel:
             format="json",
             temperature=0,
             reasoning=False,
+            num_ctx=int(os.environ.get("OLLAMA_NUM_CTX", "8192")),
         )
     if name == "bedrock":
         model_id = os.environ.get("BEDROCK_MODEL_ID")

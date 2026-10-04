@@ -1,0 +1,30 @@
+{"id": "r01", "request": "We need 3 more GPU dev boxes for the ML team", "expected": [{"sku": "GPU-DEVBOX-4090", "qty": 3}]}
+{"id": "r02", "request": "Please order 4 14-inch pro laptops for the new hires", "expected": [{"sku": "LAPTOP-14-PRO", "qty": 4}]}
+{"id": "r03", "request": "Order 6 27-inch 4K monitors for the design floor", "expected": [{"sku": "MONITOR-27-4K", "qty": 6}]}
+{"id": "r04", "request": "We need 8 USB4 docking stations for hot desks", "expected": [{"sku": "DOCK-USB4", "qty": 8}]}
+{"id": "r05", "request": "Buy 12 ergonomic keyboards for support", "expected": [{"sku": "KEYBOARD-ERGO", "qty": 12}]}
+{"id": "r06", "request": "Get 10 noise-cancelling headsets for the call center", "expected": [{"sku": "HEADSET-ANC", "qty": 10}]}
+{"id": "r07", "request": "Requesting 2 ergonomic chairs for the finance team", "expected": [{"sku": "CHAIR-ERGO", "qty": 2}]}
+{"id": "r08", "request": "1 GPU dev box for the new research hire", "expected": [{"sku": "GPU-DEVBOX-4090", "qty": 1}]}
+{"id": "r09", "request": "We want 5 laptops (14-inch pro) for the sales team", "expected": [{"sku": "LAPTOP-14-PRO", "qty": 5}]}
+{"id": "r10", "request": "Add 15 monitors, 27-inch 4K, to the training room", "expected": [{"sku": "MONITOR-27-4K", "qty": 15}]}
+{"id": "r11", "request": "Please get two GPU dev boxes for the vision project", "expected": [{"sku": "GPU-DEVBOX-4090", "qty": 2}]}
+{"id": "r12", "request": "We need a dozen USB4 docking stations", "expected": [{"sku": "DOCK-USB4", "qty": 12}]}
+{"id": "r13", "request": "Order five ergonomic chairs for the new office", "expected": [{"sku": "CHAIR-ERGO", "qty": 5}]}
+{"id": "r14", "request": "Buy three 14-inch pro laptops for contractors", "expected": [{"sku": "LAPTOP-14-PRO", "qty": 3}]}
+{"id": "r15", "request": "We would like ten noise-cancelling headsets", "expected": [{"sku": "HEADSET-ANC", "qty": 10}]}
+{"id": "r16", "request": "2 laptops and 2 monitors for the new designers", "expected": [{"sku": "LAPTOP-14-PRO", "qty": 2}, {"sku": "MONITOR-27-4K", "qty": 2}]}
+{"id": "r17", "request": "Order 4 ergonomic keyboards and 4 USB4 docking stations", "expected": [{"sku": "KEYBOARD-ERGO", "qty": 4}, {"sku": "DOCK-USB4", "qty": 4}]}
+{"id": "r18", "request": "We need 3 ergonomic chairs and 3 27-inch 4K monitors", "expected": [{"sku": "CHAIR-ERGO", "qty": 3}, {"sku": "MONITOR-27-4K", "qty": 3}]}
+{"id": "r19", "request": "1 GPU dev box and 2 noise-cancelling headsets for the lab", "expected": [{"sku": "GPU-DEVBOX-4090", "qty": 1}, {"sku": "HEADSET-ANC", "qty": 2}]}
+{"id": "r20", "request": "Buy 5 14-inch pro laptops and 5 USB4 docking stations", "expected": [{"sku": "LAPTOP-14-PRO", "qty": 5}, {"sku": "DOCK-USB4", "qty": 5}]}
+{"id": "r21", "request": "6 ergonomic keyboards and 6 noise-cancelling headsets for the new team", "expected": [{"sku": "KEYBOARD-ERGO", "qty": 6}, {"sku": "HEADSET-ANC", "qty": 6}]}
+{"id": "r22", "request": "2 GPU dev boxes and 2 27-inch 4K monitors for the demo room", "expected": [{"sku": "GPU-DEVBOX-4090", "qty": 2}, {"sku": "MONITOR-27-4K", "qty": 2}]}
+{"id": "r23", "request": "Order 7 ergonomic chairs and 7 ergonomic keyboards", "expected": [{"sku": "CHAIR-ERGO", "qty": 7}, {"sku": "KEYBOARD-ERGO", "qty": 7}]}
+{"id": "r24", "request": "We need 6 noise cancelling headphones for the open office", "expected": [{"sku": "HEADSET-ANC", "qty": 6}]}
+{"id": "r25", "request": "Order 9 docking stations that support USB4", "expected": [{"sku": "DOCK-USB4", "qty": 9}]}
+{"id": "r26", "request": "Get 4 ergonomic office chairs for the support team", "expected": [{"sku": "CHAIR-ERGO", "qty": 4}]}
+{"id": "r27", "request": "Please buy 3 graphics workstations with an RTX 4090 for the ML team", "expected": [{"sku": "GPU-DEVBOX-4090", "qty": 3}]}
+{"id": "r28", "request": "We need 2 GPU dev boxes for the ML team, budget under $6k", "expected": [{"sku": "GPU-DEVBOX-4090", "qty": 2}]}
+{"id": "r29", "request": "Order 6 monitors (27-inch 4K) by the 15th, under $3k", "expected": [{"sku": "MONITOR-27-4K", "qty": 6}]}
+{"id": "r30", "request": "Need 4 14-inch pro laptops delivered by October 20, ideally under $8k total", "expected": [{"sku": "LAPTOP-14-PRO", "qty": 4}]}
