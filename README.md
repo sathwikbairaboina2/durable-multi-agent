@@ -1,6 +1,16 @@
-# Durable multi-agent workflow
+# 🧾 Durable multi-agent workflow
+
+> Human-gated procurement agents. Agents propose a purchase order; Step Functions waits for a signed Slack approval.
 
 200 approval runs with 59 crashes injected after commit, 200 double clicks and a budget race: 0 duplicate or missing purchase orders, $0.00 budget drift, $0.00 overspend (Step Functions Local + DynamoDB Local, 2026-10-04).
+
+<!-- readme-header -->
+[![CI](https://github.com/sathwikbairaboina2/durable-multi-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/sathwikbairaboina2/durable-multi-agent/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/license-MIT-blue) ![TypeScript](https://img.shields.io/badge/-TypeScript-555) ![Step Functions](https://img.shields.io/badge/-Step%20Functions-555) ![LangGraph](https://img.shields.io/badge/-LangGraph-555)
+
+| Measured | Source |
+|---|---|
+| **0 duplicate POs** | `bench/results/latest.json` |
+| **$0.00 budget drift** | `bench/results/latest.json` |
 
 A LangGraph agent team proposes a purchase order. A Step Functions workflow waits, at zero compute, for a human to approve it in Slack. A deterministic TypeScript core writes the ledger row exactly once and never over budget.
 
