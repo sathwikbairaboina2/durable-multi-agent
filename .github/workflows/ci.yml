@@ -1,0 +1,61 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  node:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run synth
+      - run: npm run build -w sfn-local-harness
+      - run: npm pack -w sfn-local-harness --dry-run
+
+  agent:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.21"
+      - name: Sync
+        working-directory: agent
+        run: uv sync --frozen
+      - name: Test
+        working-directory: agent
+        run: uv run pytest -q
+
+  integration:
+    needs: node
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Start DynamoDB Local and Step Functions Local
+        run: docker compose up -d dynamodb sfn
+      - name: Integration tests
+        run: npm run test:integration
+      - name: Short chaos benchmark
+        run: npm run bench -- --runs 50 --no-write
+      - name: Logs and teardown
+        if: always()
+        run: |
+          docker compose logs --no-color sfn | tail -n 100
+          docker compose down
